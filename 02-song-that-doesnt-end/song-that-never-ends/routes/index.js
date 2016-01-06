@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/verse2', function (req, res, next) {
-  res.render('verse2', {title: 'It goes on and on my friends'})
+  res.render('verse2', {title: 'It goes on and on my friends', pic:"http://i.ytimg.com/vi/1_47KVJV8DU/mqdefault.jpg"})
 })
 
 router.get('/verse3', function(req, res, next){
