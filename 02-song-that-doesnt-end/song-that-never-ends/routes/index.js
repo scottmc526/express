@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.render('index', {title: 'This is the song that never ends', pic:"http://rophydoes.rintin.com/wp-content/uploads/2011/01/lambchop1.jpg" , nextPg:'verse2', home:'/'});
 });
