@@ -2,7 +2,15 @@ var hipster = require('../lib/snippets');
 
 
 function hipsterIt (userInput) {
-  console.log(userInput.split(' '));
+  var arr= [];
+  var data = userInput.toUpperCase().split(' ');
+  for (var i = 0; i < data.length; i++) {
+    var rand = hipster[Math.floor(Math.random() * hipster.length)];
+    arr.push(data[i] + " "+ rand)
+  }
+  arr = arr.join(' ')
+  console.log(arr)
 }
 
-hipsterIt('Hello There people')
+
+hipsterIt('hello there people')
