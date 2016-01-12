@@ -2,7 +2,8 @@ extends layout
 
 block content
   h1 write a sentence or two and we'll hipstafy it for you!
+  form(action='/show', method='post')
   
-  textarea=userInput
-  a(href='/show')
+    input(type='text')
+      
     input(type='submit')

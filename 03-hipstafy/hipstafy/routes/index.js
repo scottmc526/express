@@ -8,9 +8,13 @@ router.get('/', function(req, res, next) {
   res.render('index', req.body.userInput);
 });
 
-router.get('/show', function(req, res, next){
-  res.render('hipstafy/show', req.body.userInput)
+// router.get('/show', function(req, res, next){
+//   res.render('show')
+// })
+
+router.post('/show', function(req, res, next){
+  res.render('show');
 })
-//res.render('show', {results: results})
+
 
 module.exports = router;
