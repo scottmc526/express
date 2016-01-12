@@ -1,7 +1,7 @@
 var hipster = require('../lib/snippets');
 
 
-function hipsterIt (userInput) {
+var hipsterIt = function (userInput) {
   var arr= [];
   var data = userInput.toUpperCase().split(' ');
   for (var i = 0; i < data.length; i++) {
@@ -9,8 +9,7 @@ function hipsterIt (userInput) {
     arr.push(data[i] + " "+ rand)
   }
   arr = arr.join(' ')
-  console.log(arr)
+  return arr;
 }
 
-
-hipsterIt('hello there people')
+module.exports = hipsterIt;

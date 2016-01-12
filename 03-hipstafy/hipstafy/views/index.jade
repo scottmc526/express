@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 write a sentence or two and we'll hipstafy it for you!
+  
+  textarea=userInput
+  a(href='/show')
+    input(type='submit')
