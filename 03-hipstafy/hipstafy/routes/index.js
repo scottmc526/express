@@ -13,7 +13,9 @@ router.get('/', function(req, res, next) {
 // })
 
 router.post('/show', function(req, res, next){
-  res.render('show');
+  var input = req.body.userInput;
+  var hipstafied = hipstafy(input);
+  res.render('show', {hipstafied});
 })
 
 
