@@ -6,3 +6,31 @@ body {
 a {
   color: #00B7FF;
 }
+h1 {
+  color: #0051f7;
+  font-size: 40px;
+  margin: 0;
+}
+
+h2 {
+  color: #f2a43e;
+  margin:0;
+}
+
+h3 {
+  color: #3a7628;
+}
+
+.button {
+  margin-left: 26%;
+  width: 12%;
+  background-color: #f2a43e;
+  border: 1px solid red;
+  font-family: 'Lucida Grande'
+}
+
+.hipster {
+  font-family: 'Lucida Grande';
+  font-size: 50px;
+  color: #f2a43e;
+}

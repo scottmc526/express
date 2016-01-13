@@ -1,9 +1,13 @@
 extends layout
 
 block content
-  h1 write a sentence or two and we'll hipstafy it for you!
+  h1 Hiptstafy
+  h2 how to be hipsta-licious
+  br
+  br
+  h3 Write a sentence or two and we'll hipstafy it for you!
   form(action='/show', method='post')
   
-    input(type='text' name='userInput')  
-      
-    input(type='submit')
+    textarea(cols='70', name='userInput')  
+    br
+    input.button(type='submit' value='hipstafy!') 
