@@ -5,7 +5,7 @@ var hipstafy = require('../src/hipstafy.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', req.body.userInput);
+  res.render('index');
 });
 
 // router.get('/show', function(req, res, next){
