@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var env = require('dotenv');
+var env = require('dotenv').load();
+var unirest = require('unirest');
+var apiKey = process.env.NYT_API_KEY;
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,6 +16,12 @@ router.get('/new', function(req, res, next){
 
 router.post('/', function(req, res, next){
   res.redirect('/')
+})
+
+router.get('/books', function(req, res, next) {
+  unirest.get('http://api.nytimes.com/svc/books/v3/lists/hardcover-fiction.json?api-key=' + apiKey).end(function(response) {
+    res.json(response);
+  });
 })
 
 router.get('/:id', function(req, res, next){
@@ -30,10 +39,5 @@ router.post('/:id/edit', function(req, res, next){
 router.post('/:id/delete', function(req, res, next){
   res.redirect('/')
 });
-router.get('/books', function(req, res, next) {
-  unirest.get('http://api.nytimes.com/svc/books/v3/lists/hardcover-fiction.json?api-key=' + NYT_API_KEY).end(function(response) {
-    console.log(response.body);
-  });
-})
 
 module.exports = router;
